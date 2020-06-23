@@ -2,13 +2,13 @@ module Api
   module V1
     class UsersController < ApplicationController
       # before_action :set_user, only: [:show, :update, :destroy]
+      before_action :authorize_access_request!
     
-      # # GET /users
-      # def index
-      #   @users = User.all
+      def index
+        @users = User.all
     
-      #   render json: @users
-      # end
+        render json: @users
+      end
     
       # # GET /users/1
       # def show

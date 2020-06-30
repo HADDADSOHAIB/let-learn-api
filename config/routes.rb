@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post 'login', to: 'login#create'
       delete 'signout', to: 'loging#destroy'
       put 'refresh', to: 'login#refresh'
+      post 'signup/unique', to: 'signup#check_uniqueness'
       post 'signup', to: 'signup#create'
     end
   end
